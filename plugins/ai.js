@@ -5,7 +5,7 @@ const {
 } = require("../lib/");
 
 Function({
-	pattern: 'dalle ?(.*)',
+	pattern: 'draw ?(.*)',
 	fromMe: true,
 	desc: 'Dall-E ai image generation',
 	type: 'ai'
@@ -17,13 +17,13 @@ Function({
 })
 
 Function({
-	pattern: 'bing ?(.*)',
+	pattern: 'bingo ?(.*)',
 	fromMe: true,
 	desc: 'Microsoft bing ai',
 	type: 'ai'
 }, async (message, match) => {
 	if (!match) return await message.reply('*Need a prompt!*\n_Example: bing what is the time now?_')
-	const msg = await message.reply('_Thinking..._')
+	const msg = await message.reply('_Thinking...✨_')
 	const content = await bing(match)
 	await msg.edit(content)
 })
