@@ -254,12 +254,12 @@ Function({
         const fileSizeInMB = parseFloat(result.size);
         if (fileSizeInMB > 10) {
             const audioBuffer = await getBuffer(result.url);
-            return await message.client.sendMessage(message.jid, { audio: audioBuffer, mimetype: 'audio/mpeg'}, { quoted: message.data });
+            return await message.client.sendMessage(message.jid, { audio: audioBuffer, mimetype: 'audio/mpeg',ptt:true}, { quoted: message.data });
         } else {
             const thumb = await getBuffer(await getYoutubeThumbnail(ytId[1]));
             const audioBuffer = await getBuffer(result.url);
-            const writer = await addAudioMetaData(await toAudio(audioBuffer), thumb, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official');
-            return await message.client.sendMessage(message.jid, { audio: writer, mimetype: 'audio/mpeg'}, { quoted: message.data });
+            const writer = await addAudioMetaData(await toAudio(audioBuffer), thumb, result.title, `${config.BOT_INFO.split(";")[0]}`, 'G3N1U5');
+            return await message.client.sendMessage(message.jid, { audio: writer, mimetype: 'audio/mpeg',ptt:true}, { quoted: message.data });
         }
     } else {
         const search = await yts(match);
@@ -268,12 +268,12 @@ Function({
         const fileSizeInMB = parseFloat(result.size);
         if (fileSizeInMB > 10) {
             const audioBuffer = await getBuffer(result.url);
-            return await message.client.sendMessage(message.jid, { audio: audioBuffer, mimetype: 'audio/mpeg'}, { quoted: message.data });
+            return await message.client.sendMessage(message.jid, { audio: audioBuffer, mimetype: 'audio/mpeg',ptt:true}, { quoted: message.data });
         } else {
             const thumb = await getBuffer(result.thumb);
             const audioBuffer = await getBuffer(result.url);
-            const file = await addAudioMetaData(audioBuffer, thumb, result.title, `${config.BOT_INFO.split(";")[0]}`, 'Hermit Official');
-            return await message.client.sendMessage(message.jid, { audio: file, mimetype: 'audio/mpeg'}, { quoted: message.data });
+            const file = await addAudioMetaData(audioBuffer, thumb, result.title, `${config.BOT_INFO.split(";")[0]}`, 'G3N1U5');
+            return await message.client.sendMessage(message.jid, { audio: file, mimetype: 'audio/mpeg',ptt:true}, { quoted: message.data });
         }
     }
 });
