@@ -240,7 +240,7 @@ Function({
 });
 
 Function({
-    pattern: 'yta ?(.*)',
+    pattern: 'sing ?(.*)',
     fromMe: isPublic,
     desc: 'Download audios from YouTube',
     type: 'download'
