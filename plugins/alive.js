@@ -16,10 +16,10 @@ Function({
 	type: 'info'
 }, async (message, match, client) => {
 	var start = new Date().getTime();
-	var msg = await message.reply('*Pinging⚡*');
+	var msg = await message.reply('*PINGING⚡*');
 	var end = new Date().getTime();
 	var responseTime = end - start;
-	await msg.edit(`*PONG!⚡*\nLatency: ${responseTime}ms`);
+	await msg.edit(`*PONGGG!⚡*\n*Latency: ${responseTime}ms*`);
 });
 
 Function({
